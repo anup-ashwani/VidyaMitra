@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VidyaMitra.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eae2fcfbb77aaa332ab598f94a9a0a78d349853a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b6181174534fff9f5186e2e04918ccdeb448f4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VidyaMitra.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VidyaMitra.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
