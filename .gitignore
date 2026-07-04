@@ -1,0 +1,82 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet Credential Provider
+.nuget/
+
+# Build Log
+BuildLog.htm
+
+# Publish Web Output
+[Pp]ublish[Ww]eb/
+*.azurePubxml
+*.pubxml
+*.publishproj
+
+# Web workbench
+.webtools.project
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Local user-specific files
+launchSettings.json
+
+# Generated files
+*.Generated.cs
+
+# EF Core migrations backup folder
+Migrations/
+!Migrations/.gitkeep
+
+# User secrets
+secrets.json
+secrets.*.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+~*
