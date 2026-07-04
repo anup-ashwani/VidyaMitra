@@ -1,0 +1,11 @@
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/bin/Release/net10.0/VidyaMitra.Domain.deps.json
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/bin/Release/net10.0/VidyaMitra.Domain.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/bin/Release/net10.0/VidyaMitra.Domain.pdb
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/VidyaMitra.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/VidyaMitra.Domain.AssemblyInfoInputs.cache
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/VidyaMitra.Domain.AssemblyInfo.cs
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/VidyaMitra.Domain.csproj.CoreCompileInputs.cache
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/VidyaMitra.Domain.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/refint/VidyaMitra.Domain.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/VidyaMitra.Domain.pdb
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/obj/Release/net10.0/ref/VidyaMitra.Domain.dll

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "NwhneO6Qv2w=",
+  "success": true,
+  "projectFilePath": "/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.API/VidyaMitra.API.csproj",
+  "expectedPackageFiles": [
+    "/Users/ashwani/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/10.0.9/microsoft.aspnetcore.authentication.jwtbearer.10.0.9.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.bcl.cryptography/10.0.2/microsoft.bcl.cryptography.10.0.2.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.entityframeworkcore/10.0.9/microsoft.entityframeworkcore.10.0.9.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.9/microsoft.entityframeworkcore.abstractions.10.0.9.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.9/microsoft.entityframeworkcore.analyzers.10.0.9.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.identitymodel.abstractions/8.19.1/microsoft.identitymodel.abstractions.8.19.1.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.19.1/microsoft.identitymodel.jsonwebtokens.8.19.1.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.identitymodel.logging/8.19.1/microsoft.identitymodel.logging.8.19.1.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.identitymodel.protocols/8.0.1/microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/microsoft.identitymodel.tokens/8.19.1/microsoft.identitymodel.tokens.8.19.1.nupkg.sha512",
+    "/Users/ashwani/.nuget/packages/system.identitymodel.tokens.jwt/8.19.1/system.identitymodel.tokens.jwt.8.19.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Repository.deps.json
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Repository.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Repository.pdb
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Application.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Domain.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Domain.pdb
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/bin/Debug/net10.0/VidyaMitra.Application.pdb
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.csproj.AssemblyReference.cache
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.AssemblyInfoInputs.cache
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.AssemblyInfo.cs
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.csproj.CoreCompileInputs.cache
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMit.FC514FFF.Up2Date
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/refint/VidyaMitra.Repository.dll
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/VidyaMitra.Repository.pdb
+/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Repository/obj/Debug/net10.0/ref/VidyaMitra.Repository.dll
