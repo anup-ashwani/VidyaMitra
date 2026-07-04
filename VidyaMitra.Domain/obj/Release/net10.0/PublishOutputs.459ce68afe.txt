@@ -1,3 +1,0 @@
-/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/bin/Release/net10.0/publish/VidyaMitra.Domain.dll
-/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/bin/Release/net10.0/publish/VidyaMitra.Domain.deps.json
-/Users/ashwani/Documents/Workspace/VidyaMitra/VidyaMitra.Domain/bin/Release/net10.0/publish/VidyaMitra.Domain.pdb
