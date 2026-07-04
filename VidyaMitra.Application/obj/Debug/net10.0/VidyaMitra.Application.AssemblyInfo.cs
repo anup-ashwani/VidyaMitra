@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VidyaMitra.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eae2fcfbb77aaa332ab598f94a9a0a78d349853a")]
 [assembly: System.Reflection.AssemblyProductAttribute("VidyaMitra.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VidyaMitra.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
