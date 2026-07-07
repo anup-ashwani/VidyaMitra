@@ -1,47 +1,57 @@
-using System.Text;
-using VidyaMitra.Application.DTOs;
-using VidyaMitra.Application.Interfaces;
-using VidyaMitra.Repository.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using VidyaMitra.Repository.Repositories;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
+using VidyaMitra.Api;
+using VidyaMitra.API.Extensions;
+using VidyaMitra.Application;
+using VidyaMitra.Domain;
+using VidyaMitra.Repository;
+using VidyaMitra.Repository.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Bind JwtSettings Options Pattern
-var jwtSettings = new JwtSettings();
-builder.Configuration.GetSection("JwtSettings").Bind(jwtSettings);
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+//Configure EntityFramework 
+//builder.Services.AddDbContext<VidyaMitraDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("VidyaMitraConnection")));
 
-// 2. Register application services
-// Add scoped services here, e.g. builder.Services.AddScoped<IYourService, YourService>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+// Fetch connection string and inject PostgreSQL provider setup
+builder.Services.AddDbContext<VidyaMitraDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("VidyaMitraConnection")));
 
-// 3. Configure JWT Authentication Pipeline
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings.Issuer,
-        ValidAudience = jwtSettings.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Secret)),
-        ClockSkew = TimeSpan.Zero // Immediate expiration validation
-    };
-});
+////Configure AutoMapper
+//IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+//builder.Services.AddSingleton(mapper);
+//builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
+
+//---Register Dependencies------------
+builder.Services.AddApiDI();
+builder.Services.AddApplicationDI();
+builder.Services.AddRepositoryDI();
+builder.Services.AddDomainDI();
+
+builder.Services.AddOpenApi();
+//---------------
+
+builder.AddAppAuthentication();
+//builder.Services.AddAuthorization(); //Require when start Authorization process
+
 var app = builder.Build();
 
-// 4. Position Middleware correctly in the request lifecycle
+//Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "Open Api V1");
+    });
+
+    app.MapScalarApiReference();
+}
+
+//Position Middleware correctly in the request lifecycle
 app.UseAuthentication(); // Always goes before Authorization
 app.UseAuthorization();
 

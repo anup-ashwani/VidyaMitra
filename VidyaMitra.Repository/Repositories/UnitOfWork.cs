@@ -6,28 +6,28 @@ using Microsoft.EntityFrameworkCore;
 
 namespace VidyaMitra.Repository.Repositories;
 
-public class UnitOfWork : IUnitOfWork
+public class UnitOfWork //: IUnitOfWork
 {
-    private readonly AppDbContext _context;
+    //private readonly AppDbContext _context;
 
-    public IStudentRepository Students { get; private set; }
-    public ICourseRepository Courses { get; private set; }
+    //public IStudentRepository Students { get; private set; }
+    //public ICourseRepository Courses { get; private set; }
 
-    public UnitOfWork(AppDbContext context)
-    {
-        _context = context;
-        Students = new StudentRepository(_context);
-        Courses = new CourseRepository(_context);
-    }
+    //public UnitOfWork(AppDbContext context)
+    //{
+    //    _context = context;
+    //    Students = new StudentRepository(_context);
+    //    Courses = new CourseRepository(_context);
+    //}
 
-    public async Task<int> CompleteAsync()
-    {
-        return await _context.SaveChangesAsync();
-    }
+    //public async Task<int> CompleteAsync()
+    //{
+    //    return await _context.SaveChangesAsync();
+    //}
 
-    public void Dispose()
-    {
-        _context.Dispose();
-        GC.SuppressFinalize(this);
-    }
+    //public void Dispose()
+    //{
+    //    _context.Dispose();
+    //    GC.SuppressFinalize(this);
+    //}
 }

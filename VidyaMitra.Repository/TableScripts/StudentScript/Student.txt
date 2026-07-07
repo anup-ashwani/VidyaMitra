@@ -1,0 +1,137 @@
+-- DROP TABLE IF EXISTS public."StudentProfile";
+
+CREATE TABLE IF NOT EXISTS public."StudentProfile"
+(
+    "Id" integer NOT NULL,
+    "EnrollmentNumber" character varying(15) COLLATE pg_catalog."default",
+    "Title" character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    "FirstName" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "MiddleName" character varying(50) COLLATE pg_catalog."default",
+    "LastName" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "DateOfBirth" date NOT NULL,
+    "Nationality" character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    "Religion" character varying(15) COLLATE pg_catalog."default",
+    "AadharNumber" character varying(16) COLLATE pg_catalog."default",
+    "BloodGroup" character varying(10) COLLATE pg_catalog."default",
+    "ProfilePicture" bytea,
+    "DigitalSignature" bytea,
+    "LinkedInId" character varying(25) COLLATE pg_catalog."default",
+    "GitHubId" character varying(25) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."StudentProfile"
+    OWNER to postgres;
+
+-----------------------------------------------------------
+
+-- Table: public.StudentContactDetail
+
+-- DROP TABLE IF EXISTS public."StudentContactDetail";
+
+CREATE TABLE IF NOT EXISTS public."StudentContactDetail"
+(
+    "ContactId" integer NOT NULL,
+    "ProfileId" integer,
+    "CountryCode" character(3) COLLATE pg_catalog."default",
+    "PhoneNumber" character varying(10) COLLATE pg_catalog."default",
+    "AlternatePhoneNumber" character varying(10) COLLATE pg_catalog."default",
+    "PrimaryEmailId" character varying(50) COLLATE pg_catalog."default",
+    "SecondaryEmailId" character varying(50) COLLATE pg_catalog."default",
+    "C_AddressLine" character varying(500) COLLATE pg_catalog."default",
+    "C_Country" character varying(25) COLLATE pg_catalog."default",
+    "C_State" character varying(25) COLLATE pg_catalog."default",
+    "C_City" character varying(25) COLLATE pg_catalog."default",
+    "C_PinCode" character varying(5) COLLATE pg_catalog."default",
+    "P_AddressLine1" character varying(200) COLLATE pg_catalog."default",
+    "P_AddressLine2" character varying(200) COLLATE pg_catalog."default",
+    "P_AddressLine3" character varying(200) COLLATE pg_catalog."default",
+    "P_Country" character varying(25) COLLATE pg_catalog."default",
+    "P_State" character varying(25) COLLATE pg_catalog."default",
+    "P_City" character varying(25) COLLATE pg_catalog."default",
+    "P_PinCode" character varying(5) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."StudentContactDetail"
+    OWNER to postgres;
+
+-----------------------------------------------------------
+
+-- Table: public.StudentEmeregencyContact
+
+-- DROP TABLE IF EXISTS public."StudentEmeregencyContact";
+
+CREATE TABLE IF NOT EXISTS public."StudentEmeregencyContact"
+(
+    "EmeregencyContactId" integer NOT NULL,
+    "ProfileId" integer,
+    "PhoneNumber" character varying(10) COLLATE pg_catalog."default",
+    "EmailId" character varying(50) COLLATE pg_catalog."default",
+    "RelationShip" character varying(15) COLLATE pg_catalog."default",
+    "AddressLine" character varying(200) COLLATE pg_catalog."default",
+    "Country" character varying(25) COLLATE pg_catalog."default",
+    "State" character varying(25) COLLATE pg_catalog."default",
+    "City" character varying(25) COLLATE pg_catalog."default",
+    "PinCode" character varying(5) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."StudentEmeregencyContact"
+    OWNER to postgres;
+
+-----------------------------------------------------------
+
+-- Table: public.StudentParentDetail
+
+-- DROP TABLE IF EXISTS public."StudentParentDetail";
+
+CREATE TABLE IF NOT EXISTS public."StudentParentDetail"
+(
+    "ParentID" integer NOT NULL,
+    "ProfileId" integer,
+    "FatherName" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "MotherName" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "GuardianName" character varying(50) COLLATE pg_catalog."default",
+    "PhoneNumber" character varying(10) COLLATE pg_catalog."default",
+    "Email" character varying(25) COLLATE pg_catalog."default",
+    "AddressLine" character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    "Country" character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    "City" character varying(25) COLLATE pg_catalog."default",
+    "State" character varying(25) COLLATE pg_catalog."default",
+    "PinCode" character varying(5) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."StudentParentDetail"
+    OWNER to postgres;
+
+-----------------------------------------------------------
+
+-- Table: public.StudentNotification
+
+-- DROP TABLE IF EXISTS public."StudentNotification";
+
+CREATE TABLE IF NOT EXISTS public."StudentNotification"
+(
+    "Id" integer NOT NULL,
+    "ProfileId" integer,
+    "EmailAlert" boolean,
+    "SMSAlert" boolean,
+    "AssignmentsReminder" boolean,
+    "DuesReminder" boolean,
+    "PushNotification" boolean,
+    "WhatsAppAlert" boolean
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."StudentNotification"
+    OWNER to postgres;
+
+-----------------------------------------------------------
+

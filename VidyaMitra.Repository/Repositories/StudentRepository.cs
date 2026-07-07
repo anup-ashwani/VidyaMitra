@@ -1,24 +1,54 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Text;
 using VidyaMitra.Application.Interfaces;
 using VidyaMitra.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 using VidyaMitra.Repository.Data;
 
-namespace VidyaMitra.Repository.Repositories;
-
-public class StudentRepository(AppDbContext context) : GenericRepository<Student>(context), IStudentRepository
+namespace VidyaMitra.Repository.Repositories
 {
-    public async Task<Student?> GetStudentWithEnrollmentsAsync(int studentId)
+    public class StudentRepository : IStudentRepository
     {
-        return await _context.Set<Student>()
-            .Include(s => s.Enrollments)
-                .ThenInclude(e => e.Course)
-            .FirstOrDefaultAsync(s => s.Id == studentId);
-    }
+        private readonly VidyaMitraDbContext _context;
+        public StudentRepository(VidyaMitraDbContext context)
+        {
+            _context = context;
+        }
 
-    public async Task<IEnumerable<Student>> GetStudentsByDepartmentAsync(int departmentId)
-    {
-        return await _context.Set<Student>()
-            .Where(s => s.DepartmentId == departmentId)
-            .ToListAsync();
+        public async Task<StudentProfile> GetStudentProfileAsync(int id = 0, string name = "")
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return await _context.StudentProfiles.Where(x=> x.Id == id).FirstOrDefaultAsync();
+            }
+            else
+            {
+                return await _context.StudentProfiles.Where(x => string.Equals(x.FirstName, name)).FirstOrDefaultAsync();
+            }
+        }
+
+        public async Task<StudentContactDetail> GetStudentContactAsync(int id)
+        {
+            return await _context.StudentContactDetails.Where(x=> x.ProfileId == id).FirstOrDefaultAsync();
+        }
+
+        public async Task<StudentEmeregencyContact> GetStudentEmergencyContactAsync(int id)
+        {
+            return await _context.StudentEmeregencyContacts.Where(x => x.ProfileId == id).FirstOrDefaultAsync();
+        }
+
+        public async Task<StudentParentDetail> GetStudentParentDetailsAsync(int id)
+        {
+            return await _context.StudentParentDetails.Where(x => x.ProfileId == id).FirstOrDefaultAsync();
+        }
+
+        public async Task<StudentNotification> GetStudentNotificationAsync(int id)
+        {
+            return await _context.StudentNotifications.Where(x => x.ProfileId == id).FirstOrDefaultAsync();
+        }
+
+
+
     }
 }
