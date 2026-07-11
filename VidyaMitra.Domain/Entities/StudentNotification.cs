@@ -5,7 +5,7 @@ namespace VidyaMitra.Domain.Entities;
 
 public partial class StudentNotification
 {
-    public int Id { get; set; }
+    public int NotificationId { get; set; }
 
     public int? ProfileId { get; set; }
 
@@ -20,4 +20,6 @@ public partial class StudentNotification
     public bool? PushNotification { get; set; }
 
     public bool? WhatsAppAlert { get; set; }
+
+    public virtual StudentProfile? Profile { get; set; }
 }

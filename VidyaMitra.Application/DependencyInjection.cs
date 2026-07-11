@@ -19,8 +19,6 @@ namespace VidyaMitra.Application
             // Register application services
             services.AddScoped<IStudentService, StudentService>();
 
-            //services.AddDomainDI();
-
             return services;
         }
     }

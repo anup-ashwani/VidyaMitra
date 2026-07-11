@@ -8,6 +8,8 @@ namespace VidyaMitra.Application.Interfaces
 {
     public interface IStudentService
     {
-        Task<StudentDetailDto> GetStudentDetailAsync(int id = 0, string name = "");
+        Task<ProfileDetailDto> GetStudentDetailAsync(string email);
+
+        Task<ResponseDto> SaveStudentDetail(ProfileDetailDto profile);
     }
 }

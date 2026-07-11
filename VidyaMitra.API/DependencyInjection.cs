@@ -1,9 +1,6 @@
 ﻿
-using VidyaMitra.Application;
-using VidyaMitra.Application.Interfaces;
-using VidyaMitra.Repository;
-using VidyaMitra.Repository.Data;
-using VidyaMitra.Repository.Repositories;
+using VidyaMitra.API.Auth.Services;
+using VidyaMitra.API.Auth.Services.Interface;
 
 namespace VidyaMitra.Api
 {
@@ -11,11 +8,15 @@ namespace VidyaMitra.Api
     {
         public static IServiceCollection AddApiDI(this IServiceCollection services)
         {
-            // Register application services
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            // Configure the HTTP Client used exclusively to fetch tokens
+            services.AddHttpContextAccessor();
+            services.AddHttpClient();
+            services.AddHttpClient<IAuthService, AuthService>();
 
-            //services.AddApplicationDI();
-            //services.AddRepositoryDI();
+            // Register application services
+            services.AddScoped<ITokenProvider, TokenProvider>();
+            services.AddScoped<IBaseService, BaseService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }

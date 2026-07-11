@@ -15,9 +15,9 @@ public partial class StudentContactDetail
 
     public string? AlternatePhoneNumber { get; set; }
 
-    public string? PrimaryEmailId { get; set; }
+    public string? PrimaryEmail { get; set; }
 
-    public string? SecondaryEmailId { get; set; }
+    public string? SecondaryEmail { get; set; }
 
     public string? CAddressLine { get; set; }
 
@@ -29,11 +29,7 @@ public partial class StudentContactDetail
 
     public string? CPinCode { get; set; }
 
-    public string? PAddressLine1 { get; set; }
-
-    public string? PAddressLine2 { get; set; }
-
-    public string? PAddressLine3 { get; set; }
+    public string? PAddressLine { get; set; }
 
     public string? PCountry { get; set; }
 
@@ -42,4 +38,6 @@ public partial class StudentContactDetail
     public string? PCity { get; set; }
 
     public string? PPinCode { get; set; }
+
+    public virtual StudentProfile? Profile { get; set; }
 }

@@ -6,7 +6,7 @@ namespace VidyaMitra.Domain.Dto
 {
 	public class NotificationDto
 	{
-		public int Id { get; set; }
+		public int NotificationId { get; set; }
 		public bool EmailAlert { get; set; }
 		public bool SMSAlert { get; set; }
 		public bool AssignmentsReminder { get; set; }

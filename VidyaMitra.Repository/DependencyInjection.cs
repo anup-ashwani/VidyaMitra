@@ -14,8 +14,6 @@ namespace VidyaMitra.Repository
             // Register application services
             services.AddScoped<IStudentRepository, StudentRepository>();
 
-            //services.AddApplicationDI();
-
             return services;
         }
     }

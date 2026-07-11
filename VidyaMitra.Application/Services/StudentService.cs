@@ -18,24 +18,29 @@ namespace VidyaMitra.Application.Services
             _studentRepository = studentRepository;
             _mapper = mapper;
         }
-        public async Task<StudentDetailDto> GetStudentDetailAsync(int id = 0, string name = "")
+        public async Task<ProfileDetailDto> GetStudentDetailAsync(string email = "")
         {
+            var profileData = _mapper.Map<PersonalInfoDto>(await _studentRepository.GetStudentProfileAsync(email));
+            int studentId =  profileData != null ? profileData.ProfileId : 0;
+            var contact = _mapper.Map<ContactDetailDto>(await _studentRepository.GetStudentContactAsync(studentId));
+            var econtact = _mapper.Map<EmergencyContactDto>(await _studentRepository.GetStudentEmergencyContactAsync(studentId));
+            var parent = _mapper.Map<ParentDetailDto>(await _studentRepository.GetStudentParentDetailsAsync(studentId));
+            var notification = _mapper.Map<NotificationDto>(await _studentRepository.GetStudentNotificationAsync(studentId));
 
-            var profileData = _mapper.Map<InitialDetailDto>(await _studentRepository.GetStudentProfileAsync(id, name));  
-            var contact = _mapper.Map<ContactDetailDto>(await _studentRepository.GetStudentContactAsync(id));
-            var econtact = _mapper.Map<EmeregenctContactDto>(await _studentRepository.GetStudentEmergencyContactAsync(id));
-            var parent = _mapper.Map<ParentDetailDto>(await _studentRepository.GetStudentParentDetailsAsync(id));
-            var notification = _mapper.Map<NotificationDto>(await _studentRepository.GetStudentNotificationAsync(id));
-
-            return new StudentDetailDto
+            return new ProfileDetailDto
             {
-                StudentProfile = profileData,
+                PersonalInfo = profileData,
                 ContactDetail = contact,
-                EmeregenctContact = econtact,
+                EmergencyContact = econtact,
                 ParentDetail = parent,
-                StudentNotification = notification,
+                Notification = notification,
             };
            
+        }
+
+        public async Task<ResponseDto> SaveStudentDetail(ProfileDetailDto profile)
+        {
+            return await _studentRepository.SaveStudentProfileAsync(profile);
         }
     }
 }

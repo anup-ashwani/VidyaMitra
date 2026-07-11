@@ -13,13 +13,13 @@ namespace VidyaMitra.Application
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                config.CreateMap<InitialDetailDto, StudentProfile>();
-                config.CreateMap<StudentProfile, InitialDetailDto>();
+                config.CreateMap<PersonalInfoDto, StudentProfile>();
+                config.CreateMap<StudentProfile, PersonalInfoDto>();
+
                 config.CreateMap<ContactDetailDto, StudentContactDetail>().ReverseMap();
-                config.CreateMap<EmeregenctContactDto, StudentEmeregencyContact>().ReverseMap();
+                config.CreateMap<EmergencyContactDto, StudentEmeregencyContact>().ReverseMap();
                 config.CreateMap<ParentDetailDto, StudentParentDetail>().ReverseMap();
                 config.CreateMap<NotificationDto, StudentNotification>().ReverseMap();
-
 
             }, loggerFactory);
 

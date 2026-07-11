@@ -5,13 +5,13 @@ namespace VidyaMitra.Domain.Entities;
 
 public partial class StudentEmeregencyContact
 {
-    public int EmeregencyContactId { get; set; }
+    public int EcontactId { get; set; }
 
     public int? ProfileId { get; set; }
 
     public string? PhoneNumber { get; set; }
 
-    public string? EmailId { get; set; }
+    public string? Email { get; set; }
 
     public string? RelationShip { get; set; }
 
@@ -24,4 +24,6 @@ public partial class StudentEmeregencyContact
     public string? City { get; set; }
 
     public string? PinCode { get; set; }
+
+    public virtual StudentProfile? Profile { get; set; }
 }

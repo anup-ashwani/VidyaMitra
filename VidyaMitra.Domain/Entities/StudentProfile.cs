@@ -5,7 +5,7 @@ namespace VidyaMitra.Domain.Entities;
 
 public partial class StudentProfile
 {
-    public int Id { get; set; }
+    public int ProfileId { get; set; }
 
     public string? EnrollmentNumber { get; set; }
 
@@ -17,7 +17,7 @@ public partial class StudentProfile
 
     public string LastName { get; set; } = null!;
 
-    public DateOnly DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
     public string Nationality { get; set; } = null!;
 
@@ -34,4 +34,16 @@ public partial class StudentProfile
     public string? LinkedInId { get; set; }
 
     public string? GitHubId { get; set; }
+
+    public string LoginEmail { get; set; } = null!;
+
+    public string UserId { get; set; } = null!;
+
+    public virtual ICollection<StudentContactDetail> StudentContactDetails { get; set; } = new List<StudentContactDetail>();
+
+    public virtual ICollection<StudentEmeregencyContact> StudentEmeregencyContacts { get; set; } = new List<StudentEmeregencyContact>();
+
+    public virtual ICollection<StudentNotification> StudentNotifications { get; set; } = new List<StudentNotification>();
+
+    public virtual ICollection<StudentParentDetail> StudentParentDetails { get; set; } = new List<StudentParentDetail>();
 }

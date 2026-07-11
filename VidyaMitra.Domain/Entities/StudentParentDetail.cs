@@ -28,4 +28,6 @@ public partial class StudentParentDetail
     public string? State { get; set; }
 
     public string? PinCode { get; set; }
+
+    public virtual StudentProfile? Profile { get; set; }
 }
