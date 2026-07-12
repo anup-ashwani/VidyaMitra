@@ -81,6 +81,7 @@ namespace VidyaMitra.Repository.Repositories
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
 
+                _response.Message = "Student registered successfully.";
             }
             catch (Exception ex)
             {

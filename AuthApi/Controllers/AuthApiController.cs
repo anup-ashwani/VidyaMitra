@@ -53,7 +53,7 @@ namespace AuthApi.Controllers
             if (!assignRole)
             {
                 _response.IsSuccess = false;
-                _response.Message = "Error encountered";
+                _response.Message = "Error encountered while assign role";
                 return BadRequest(_response);
             }
             return Ok(_response);

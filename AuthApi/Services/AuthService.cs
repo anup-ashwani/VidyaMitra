@@ -40,6 +40,8 @@ namespace AuthApi.Services
             try
             {
                 var result = await _userManager.CreateAsync(user, GeneratePassword(registrationRequestDto.Name));
+                
+
                 if (result.Succeeded)
                 {
                     var userToReturn = _authDbContext.ApplicationUsers.First(u => u.UserName == registrationRequestDto.Email);
@@ -57,7 +59,20 @@ namespace AuthApi.Services
                 }
                 else
                 {
-                    _response.Message = result.Errors.FirstOrDefault().Description;
+                    if (string.Equals(result.Errors.FirstOrDefault().Code, "DuplicateUserName"))
+                    {
+                        var registeredUser = await _userManager.FindByEmailAsync(registrationRequestDto.Email);
+
+                        if (registeredUser != null)
+                        {
+                            _response.IsSuccess = true;
+                            _response.Message = registeredUser.Id;
+                        }
+                    }
+                    else
+                    {
+                        _response.Message = result.Errors.FirstOrDefault().Description;
+                    }
                 }
             }
             catch (Exception ex)

@@ -14,7 +14,6 @@ namespace VidyaMitra.API.Controllers;
 [Authorize]
 public class StudentsController : ControllerBase
 {
-    //private readonly IUnitOfWork _unitOfWork;
     private readonly ResponseDto _response;
     private readonly IStudentService _studentService;
     private readonly IAuthService _authService;
@@ -63,14 +62,14 @@ public class StudentsController : ControllerBase
     //}
 
     [HttpPost]
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [AllowAnonymous]
     public async Task<IActionResult> Register([FromBody] ProfileDetailDto student)
     {
         try
         {
             ResponseDto result = await RegisterUserAndRole(student); //For Authentication
-
+            
             if (result != null && result.IsSuccess)
             {
                 student.PersonalInfo.UserId = result.Message;
@@ -83,7 +82,7 @@ public class StudentsController : ControllerBase
             }
             else
             {
-                return BadRequest();
+                return BadRequest(result);
             }
         }
         catch (Exception ex)
@@ -113,13 +112,18 @@ public class StudentsController : ControllerBase
     private async Task<ResponseDto> RegisterUserAndRole(ProfileDetailDto dto)
     {
         AuthRegRequestDto request = GetAuthRegRequest(dto);
-        ResponseDto result = await _authService.RegisterAsync(request);
+        ResponseDto authResult = await _authService.RegisterAsync(request);
 
-        if (result != null && result.IsSuccess)
+        if (authResult != null && authResult.IsSuccess)
         {
-            _ = await _authService.AssignRoleAsync(request);
+            var assignRole = await _authService.AssignRoleAsync(request);
+            if (assignRole != null && !assignRole.IsSuccess)
+            {
+                authResult.IsSuccess = false;
+                authResult.Message = assignRole.Message;
+            }
         }
 
-        return result;
+        return authResult;
     }
 }
