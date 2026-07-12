@@ -37,6 +37,22 @@ dotnet run
 
 The API will be available at `https://localhost:5001` or `http://localhost:5000`
 
+## Docker
+
+This repository includes Docker support for the API, AuthApi, and SQL Server.
+
+Start everything with:
+```bash
+docker compose up --build
+```
+
+After startup:
+- VidyaMitra API: `https://localhost:7050`
+- Auth API: `https://localhost:7040`
+
+The container uses a self-signed certificate stored in `certs/vidyamitra.pfx`.
+If your browser warns about the certificate, accept the local security exception for `localhost`.
+
 ## Project Features
 
 - Student management

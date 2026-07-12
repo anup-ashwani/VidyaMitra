@@ -23,7 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 //builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
 
 // Configure static data
-SD.AuthApiBase = builder.Configuration["ServiceUrls:AuthApiBase"];
+SD.AuthApiBase = builder.Configuration["ServiceUrls:AuthApiBase"] ?? "https://localhost:7040";
 
 //---Register Dependencies------------
 builder.Services.AddDomainDI();
