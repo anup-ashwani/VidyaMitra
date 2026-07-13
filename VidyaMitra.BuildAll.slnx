@@ -1,7 +1,9 @@
 <Solution>
+  <Project Path="AuthApi/AuthApi.csproj" />
   <Project Path="VidyaMitra.API/VidyaMitra.API.csproj" />
   <Project Path="VidyaMitra.Application/VidyaMitra.Application.csproj" />
   <Project Path="VidyaMitra.Domain/VidyaMitra.Domain.csproj" />
   <Project Path="VidyaMitra.Repository/VidyaMitra.Repository.csproj" />
+  <Project Path="VidyaMitra.Client/VidyaMitra.Client.csproj" />
   
 </Solution>
