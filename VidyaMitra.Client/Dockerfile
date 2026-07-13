@@ -1,11 +1,10 @@
 FROM node:18-alpine AS build
-WORKDIR /
+WORKDIR /app
 
 # install deps
-COPY package.json /app/package-lock.json* ./
+COPY package.json package-lock.json* ./
 RUN npm ci --silent || npm install --silent
 
-WORKDIR /app
 # copy sources and build
 COPY . .
 RUN npm run build
