@@ -32,8 +32,8 @@ jobs:
             dockerfile: VidyaMitra.API/Dockerfile
             image: vidyamitraapi
           - name: vidyamitra-client
-            context: ./VidyaMitra.Client
-            dockerfile: Dockerfile
+            context: .
+            dockerfile: VidyaMitra.Client/Dockerfile
             image: vidyamitra-client
 
     steps:
