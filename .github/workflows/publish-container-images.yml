@@ -32,7 +32,7 @@ jobs:
             dockerfile: VidyaMitra.API/Dockerfile
             image: vidyamitraapi
           - name: vidyamitra-client
-            context: .
+            context: VidyaMitra.Client/
             dockerfile: VidyaMitra.Client/Dockerfile
             image: vidyamitra-client
 
