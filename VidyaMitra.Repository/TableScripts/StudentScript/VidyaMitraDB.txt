@@ -1,0 +1,174 @@
+USE [VidyaMitraDB]
+GO
+ALTER TABLE [dbo].[StudentParentDetail] DROP CONSTRAINT [fk_StuParentDetail]
+GO
+ALTER TABLE [dbo].[StudentNotification] DROP CONSTRAINT [fk_StuNotification]
+GO
+ALTER TABLE [dbo].[StudentEmeregencyContact] DROP CONSTRAINT [fk_StuEmeregencyContact]
+GO
+ALTER TABLE [dbo].[StudentContactDetail] DROP CONSTRAINT [fk_StuContactDetail]
+GO
+/****** Object:  Table [dbo].[StudentProfile]    Script Date: 11-07-2026 17:25:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentProfile]') AND type in (N'U'))
+DROP TABLE [dbo].[StudentProfile]
+GO
+/****** Object:  Table [dbo].[StudentParentDetail]    Script Date: 11-07-2026 17:25:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentParentDetail]') AND type in (N'U'))
+DROP TABLE [dbo].[StudentParentDetail]
+GO
+/****** Object:  Table [dbo].[StudentNotification]    Script Date: 11-07-2026 17:25:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentNotification]') AND type in (N'U'))
+DROP TABLE [dbo].[StudentNotification]
+GO
+/****** Object:  Table [dbo].[StudentEmeregencyContact]    Script Date: 11-07-2026 17:25:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentEmeregencyContact]') AND type in (N'U'))
+DROP TABLE [dbo].[StudentEmeregencyContact]
+GO
+/****** Object:  Table [dbo].[StudentContactDetail]    Script Date: 11-07-2026 17:25:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[StudentContactDetail]') AND type in (N'U'))
+DROP TABLE [dbo].[StudentContactDetail]
+GO
+/****** Object:  Table [dbo].[StudentContactDetail]    Script Date: 11-07-2026 17:25:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StudentContactDetail](
+	[ContactId] [int] IDENTITY(1,1) NOT NULL,
+	[ProfileId] [int] NULL,
+	[CountryCode] [char](3) NULL,
+	[PhoneNumber] [varchar](10) NULL,
+	[AlternatePhoneNumber] [varchar](10) NULL,
+	[PrimaryEmail] [varchar](50) NULL,
+	[SecondaryEmail] [varchar](50) NULL,
+	[C_AddressLine] [varchar](500) NULL,
+	[C_Country] [varchar](25) NULL,
+	[C_State] [varchar](25) NULL,
+	[C_City] [varchar](25) NULL,
+	[C_PinCode] [varchar](5) NULL,
+	[P_AddressLine] [varchar](500) NULL,
+	[P_Country] [varchar](25) NULL,
+	[P_State] [varchar](25) NULL,
+	[P_City] [varchar](25) NULL,
+	[P_PinCode] [varchar](5) NULL,
+ CONSTRAINT [PK_ContactDetail] PRIMARY KEY CLUSTERED 
+(
+	[ContactId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[StudentEmeregencyContact]    Script Date: 11-07-2026 17:25:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StudentEmeregencyContact](
+	[EContactId] [int] IDENTITY(1,1) NOT NULL,
+	[ProfileId] [int] NULL,
+	[PhoneNumber] [varchar](10) NULL,
+	[Email] [varchar](50) NULL,
+	[RelationShip] [varchar](15) NULL,
+	[AddressLine] [varchar](500) NULL,
+	[Country] [varchar](25) NULL,
+	[State] [varchar](25) NULL,
+	[City] [varchar](25) NULL,
+	[PinCode] [varchar](5) NULL,
+ CONSTRAINT [PK_EmeregencyContact] PRIMARY KEY CLUSTERED 
+(
+	[EContactId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[StudentNotification]    Script Date: 11-07-2026 17:25:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StudentNotification](
+	[NotificationId] [int] IDENTITY(1,1) NOT NULL,
+	[ProfileId] [int] NULL,
+	[EmailAlert] [bit] NULL,
+	[SMSAlert] [bit] NULL,
+	[AssignmentsReminder] [bit] NULL,
+	[DuesReminder] [bit] NULL,
+	[PushNotification] [bit] NULL,
+	[WhatsAppAlert] [bit] NULL,
+ CONSTRAINT [PK_NotificationSetting] PRIMARY KEY CLUSTERED 
+(
+	[NotificationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[StudentParentDetail]    Script Date: 11-07-2026 17:25:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StudentParentDetail](
+	[ParentID] [int] IDENTITY(1,1) NOT NULL,
+	[ProfileId] [int] NULL,
+	[FatherName] [varchar](50) NOT NULL,
+	[MotherName] [varchar](50) NOT NULL,
+	[GuardianName] [varchar](50) NULL,
+	[PhoneNumber] [varchar](10) NULL,
+	[Email] [varchar](50) NULL,
+	[AddressLine] [varchar](500) NOT NULL,
+	[Country] [varchar](25) NOT NULL,
+	[City] [varchar](25) NULL,
+	[State] [varchar](25) NULL,
+	[PinCode] [varchar](5) NULL,
+ CONSTRAINT [PK_ParentDetail] PRIMARY KEY CLUSTERED 
+(
+	[ParentID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[StudentProfile]    Script Date: 11-07-2026 17:25:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StudentProfile](
+	[ProfileId] [int] IDENTITY(1,1) NOT NULL,
+	[EnrollmentNumber] [varchar](15) NULL,
+	[Title] [varchar](15) NOT NULL,
+	[FirstName] [varchar](20) NOT NULL,
+	[MiddleName] [varchar](20) NULL,
+	[LastName] [varchar](20) NOT NULL,
+	[DateOfBirth] [datetime] NOT NULL,
+	[Nationality] [varchar](15) NOT NULL,
+	[Religion] [varchar](15) NULL,
+	[AadharNumber] [varchar](16) NULL,
+	[BloodGroup] [varchar](10) NULL,
+	[ProfilePicture] [image] NULL,
+	[DigitalSignature] [image] NULL,
+	[LinkedInId] [varchar](50) NULL,
+	[GitHubId] [varchar](50) NULL,
+	[LoginEmail] [varchar](50) NOT NULL,
+	[UserId] [nvarchar](450) NOT NULL,
+ CONSTRAINT [PK_StudentData] PRIMARY KEY CLUSTERED 
+(
+	[ProfileId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[StudentContactDetail]  WITH CHECK ADD  CONSTRAINT [fk_StuContactDetail] FOREIGN KEY([ProfileId])
+REFERENCES [dbo].[StudentProfile] ([ProfileId])
+GO
+ALTER TABLE [dbo].[StudentContactDetail] CHECK CONSTRAINT [fk_StuContactDetail]
+GO
+ALTER TABLE [dbo].[StudentEmeregencyContact]  WITH CHECK ADD  CONSTRAINT [fk_StuEmeregencyContact] FOREIGN KEY([ProfileId])
+REFERENCES [dbo].[StudentProfile] ([ProfileId])
+GO
+ALTER TABLE [dbo].[StudentEmeregencyContact] CHECK CONSTRAINT [fk_StuEmeregencyContact]
+GO
+ALTER TABLE [dbo].[StudentNotification]  WITH CHECK ADD  CONSTRAINT [fk_StuNotification] FOREIGN KEY([ProfileId])
+REFERENCES [dbo].[StudentProfile] ([ProfileId])
+GO
+ALTER TABLE [dbo].[StudentNotification] CHECK CONSTRAINT [fk_StuNotification]
+GO
+ALTER TABLE [dbo].[StudentParentDetail]  WITH CHECK ADD  CONSTRAINT [fk_StuParentDetail] FOREIGN KEY([ProfileId])
+REFERENCES [dbo].[StudentProfile] ([ProfileId])
+GO
+ALTER TABLE [dbo].[StudentParentDetail] CHECK CONSTRAINT [fk_StuParentDetail]
+GO

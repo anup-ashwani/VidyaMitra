@@ -1,47 +1,58 @@
-using System.Text;
-using VidyaMitra.Application.DTOs;
-using VidyaMitra.Application.Interfaces;
-using VidyaMitra.Repository.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using VidyaMitra.Repository.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
+using VidyaMitra.Api;
+using VidyaMitra.API.Dto;
+using VidyaMitra.API.Extensions;
+using VidyaMitra.API.ApiUtility;
+using VidyaMitra.Application;
+using VidyaMitra.Domain;
+using VidyaMitra.Repository;
+using VidyaMitra.Repository.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Bind JwtSettings Options Pattern
-var jwtSettings = new JwtSettings();
-builder.Configuration.GetSection("JwtSettings").Bind(jwtSettings);
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+//Configure EntityFramework 
+builder.Services.AddDbContext<VidyaMitraDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("VidyaMitraConnection")));
 
-// 2. Register application services
-// Add scoped services here, e.g. builder.Services.AddScoped<IYourService, YourService>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-// 3. Configure JWT Authentication Pipeline
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings.Issuer,
-        ValidAudience = jwtSettings.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Secret)),
-        ClockSkew = TimeSpan.Zero // Immediate expiration validation
-    };
-});
-
+// Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+
+////Jwt Configuration
+//builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
+
+// Configure static data
+SD.AuthApiBase = builder.Configuration["ServiceUrls:AuthApiBase"] ?? "https://localhost:7040";
+
+//---Register Dependencies------------
+builder.Services.AddDomainDI();
+builder.Services.AddApplicationDI();
+builder.Services.AddRepositoryDI();
+builder.Services.AddApiDI();
+
+//------------------------------------
+builder.AddAppAuthentication();
+//------------------------------------
 var app = builder.Build();
 
-// 4. Position Middleware correctly in the request lifecycle
+//Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    //app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    //app.UseSwaggerUI(options =>
+    //{
+    //    options.SwaggerEndpoint("/openapi/v1.json", "Open Api V1");
+    //});
+    app.MapOpenApi();
+    app.MapScalarApiReference();
+}
+
+app.UseHttpsRedirection();
+
+//Position Middleware correctly in the request lifecycle
 app.UseAuthentication(); // Always goes before Authorization
 app.UseAuthorization();
 
