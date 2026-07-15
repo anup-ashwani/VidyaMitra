@@ -1,0 +1,122 @@
+USE [VidyaMitraDB]
+GO
+SET IDENTITY_INSERT [dbo].[StudentProfile] ON 
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (1, N'ENR2026001', N'Mr.', N'Aarav', N'Kumar', N'Sharma', CAST(N'2001-04-15T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890123', N'B+', 0x, 0x, N'aarav-sharma', N'aaravsharma', N'aarav.sharma@testmail.com', N'1b67c7dc-1177-464f-a4ba-15436e439010')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (2, N'ENR2026002', N'Ms.', N'Priya', N'R', N'Nair', CAST(N'2002-08-20T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890124', N'O+', 0x, 0x, N'priya-nair', N'priyanair', N'priya.nair@testmail.com', N'b462ea59-5ce3-44ee-89c1-576c5737c74e')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (3, N'ENR2026003', N'Mr.', N'Rohan', N'V', N'Patel', CAST(N'2000-01-10T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890125', N'A+', 0x, 0x, N'rohan-patel', N'rohanpatel', N'rohan.patel@testmail.com', N'ab75fa25-b3e8-45b4-97d7-6dbf9bfc5cb3')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (4, N'ENR2026004', N'Ms.', N'Sneha', N'P', N'Iyer', CAST(N'2001-12-05T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890126', N'AB+', 0x, 0x, N'sneha-iyer', N'snehaiyer', N'sneha.iyer@testmail.com', N'a390b949-bdeb-4495-a40c-dafd9dff8fa3')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (5, N'ENR2026005', N'Mr.', N'Aditya', N'S', N'Verma', CAST(N'2003-02-28T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890127', N'O-', 0x, 0x, N'aditya-verma', N'adityaverma', N'aditya.verma@testmail.com', N'3d06ee33-9bbb-4d17-b0c4-5d1a324f0848')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (6, N'ENR2026006', N'Ms.', N'Kavya', N'M', N'Reddy', CAST(N'2002-06-16T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890128', N'A-', 0x, 0x, N'kavya-reddy', N'kavyareddy', N'kavya.reddy@testmail.com', N'cdc9fe99-a8fd-4977-913a-ae5e68bd73fa')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (7, N'ENR2026007', N'Mr.', N'Vikram', N'D', N'Singh', CAST(N'2001-11-19T00:00:00.000' AS DateTime), N'Indian', N'Sikh', N'234567890129', N'B-', 0x, 0x, N'vikram-singh', N'vikramsingh', N'vikram.singh@testmail.com', N'0325a3c8-5cc8-48aa-841a-08684b7502bf')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (8, N'ENR2026008', N'Ms.', N'Neha', N'L', N'Das', CAST(N'2000-09-12T00:00:00.000' AS DateTime), N'Indian', N'Christian', N'234567890130', N'O+', 0x, 0x, N'neha-das', N'nehadas', N'neha.das@testmail.com', N'b129ee47-a267-44ba-a8c2-ee8aa46abb43')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (9, N'ENR2026009', N'Mr.', N'Rahul', N'T', N'Joshi', CAST(N'2002-03-22T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890131', N'AB-', 0x, 0x, N'rahul-joshi', N'rahuljoshi', N'rahul.joshi@testmail.com', N'c8319f3a-d6a0-4a19-a2f1-9ea2793f5e7b')
+GO
+INSERT [dbo].[StudentProfile] ([ProfileId], [EnrollmentNumber], [Title], [FirstName], [MiddleName], [LastName], [DateOfBirth], [Nationality], [Religion], [AadharNumber], [BloodGroup], [ProfilePicture], [DigitalSignature], [LinkedInId], [GitHubId], [LoginEmail], [UserId]) VALUES (10, N'ENR2026010', N'Ms.', N'Ananya', N'G', N'Roy', CAST(N'2001-05-30T00:00:00.000' AS DateTime), N'Indian', N'Hindu', N'234567890132', N'A+', 0x, 0x, N'ananya-roy', N'ananyaroy', N'ananya.roy@testmail.com', N'8e095bd9-460d-41a6-abcd-22e71decf254')
+GO
+SET IDENTITY_INSERT [dbo].[StudentProfile] OFF
+GO
+SET IDENTITY_INSERT [dbo].[StudentContactDetail] ON 
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (1, 1, N'+91', N'9876500001', N'9876501001', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (2, 2, N'+91', N'9876500002', N'9876501002', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (3, 3, N'+91', N'9876500003', N'9876501003', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (4, 4, N'+91', N'9876500004', N'9876501004', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (5, 5, N'+91', N'9876500005', N'9876501005', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (6, 6, N'+91', N'9876500006', N'9876501006', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (7, 7, N'+91', N'9876500007', N'9876501007', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (8, 8, N'+91', N'9876500008', N'9876501008', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (9, 9, N'+91', N'9876500009', N'9876501009', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[StudentContactDetail] ([ContactId], [ProfileId], [CountryCode], [PhoneNumber], [AlternatePhoneNumber], [PrimaryEmail], [SecondaryEmail], [C_AddressLine], [C_Country], [C_State], [C_City], [C_PinCode], [P_AddressLine], [P_Country], [P_State], [P_City], [P_PinCode]) VALUES (10, 10, N'+91', N'9876500010', N'9876501010', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+GO
+SET IDENTITY_INSERT [dbo].[StudentContactDetail] OFF
+GO
+SET IDENTITY_INSERT [dbo].[StudentEmeregencyContact] ON 
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (1, 1, N'9811100001', NULL, N'Father', N'House 12, MG Road', N'India', N'Uttar Pradesh', N'Ghaziabad', N'201001')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (2, 2, N'9811100002', NULL, N'Mother', N'Flat 24', N'India', N'Karnataka', N'Bengaluru', N'560017')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (3, 3, N'9811100003', NULL, N'Brother', N'Bungalow 10', N'India', N'Gujarat', N'Ahmedabad', N'380015')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (4, 4, N'9811100004', NULL, N'Father', N'Plot 18', N'India', N'Tamil Nadu', N'Chennai', N'600102')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (5, 5, N'9811100005', NULL, N'Father', N'Villa 7', N'India', N'Telangana', N'Hyderabad', N'500033')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (6, 6, N'9811100006', NULL, N'Mother', N'Flat 302', N'India', N'Karnataka', N'Bengaluru', N'560067')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (7, 7, N'9811100007', NULL, N'Father', N'House 101', N'India', N'Punjab', N'Ludhiana', N'141002')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (8, 8, N'9811100008', NULL, N'Sister', N'Flat 55', N'India', N'West Bengal', N'Kolkata', N'700102')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (9, 9, N'9811100009', NULL, N'Father', N'Apartment 9', N'India', N'Maharashtra', N'Pune', N'411004')
+GO
+INSERT [dbo].[StudentEmeregencyContact] ([EContactId], [ProfileId], [PhoneNumber], [Email], [RelationShip], [AddressLine], [Country], [State], [City], [PinCode]) VALUES (10, 10, N'9811100010', NULL, N'Mother', N'House 45', N'India', N'West Bengal', N'Kolkata', N'700052')
+GO
+SET IDENTITY_INSERT [dbo].[StudentEmeregencyContact] OFF
+GO
+SET IDENTITY_INSERT [dbo].[StudentNotification] ON 
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (1, 1, 1, 1, 1, 1, 1, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (2, 2, 1, 0, 1, 0, 1, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (3, 3, 0, 1, 1, 1, 0, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (4, 4, 1, 1, 0, 1, 1, 0)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (5, 5, 1, 0, 1, 1, 1, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (6, 6, 0, 1, 0, 1, 1, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (7, 7, 1, 1, 1, 0, 0, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (8, 8, 1, 0, 1, 1, 1, 0)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (9, 9, 0, 1, 1, 0, 1, 1)
+GO
+INSERT [dbo].[StudentNotification] ([NotificationId], [ProfileId], [EmailAlert], [SMSAlert], [AssignmentsReminder], [DuesReminder], [PushNotification], [WhatsAppAlert]) VALUES (10, 10, 1, 1, 1, 1, 0, 1)
+GO
+SET IDENTITY_INSERT [dbo].[StudentNotification] OFF
+GO
+SET IDENTITY_INSERT [dbo].[StudentParentDetail] ON 
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (1, 1, N'Rajesh Sharma', N'Sunita Sharma', N'Rajesh Sharma', N'9811100001', N'rajesh.sharma@testmail.com', N'House 12, MG Road', N'India', N'Ghaziabad', N'Uttar Pradesh', N'201001')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (2, 2, N'Ramesh Nair', N'Lakshmi Nair', N'Lakshmi Nair', N'9811100002', N'lakshmi.nair@testmail.com', N'Flat 24', N'India', N'Bengaluru', N'Karnataka', N'560017')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (3, 3, N'Mahesh Patel', N'Rekha Patel', N'Mahesh Patel', N'9811100003', N'mahesh.patel@testmail.com', N'Bungalow 10', N'India', N'Ahmedabad', N'Gujarat', N'380015')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (4, 4, N'Prakash Iyer', N'Meera Iyer', N'Prakash Iyer', N'9811100004', N'prakash.iyer@testmail.com', N'Plot 18', N'India', N'Chennai', N'Tamil Nadu', N'600102')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (5, 5, N'Anil Verma', N'Pooja Verma', N'Anil Verma', N'9811100005', N'anil.verma@testmail.com', N'Villa 7', N'India', N'Hyderabad', N'Telangana', N'500033')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (6, 6, N'Suresh Reddy', N'Anitha Reddy', N'Anitha Reddy', N'9811100006', N'anitha.reddy@testmail.com', N'Flat 302', N'India', N'Bengaluru', N'Karnataka', N'560067')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (7, 7, N'Harpreet Singh', N'Jasleen Kaur', N'Harpreet Singh', N'9811100007', N'harpreet.singh@testmail.com', N'House 101', N'India', N'Ludhiana', N'Punjab', N'141002')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (8, 8, N'Joseph Das', N'Maria Das', N'Joseph Das', N'9811100008', N'joseph.das@testmail.com', N'Flat 55', N'India', N'Kolkata', N'West Bengal', N'700102')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (9, 9, N'Sanjay Joshi', N'Anita Joshi', N'Sanjay Joshi', N'9811100009', N'sanjay.joshi@testmail.com', N'Apartment 9', N'India', N'Pune', N'Maharashtra', N'411004')
+GO
+INSERT [dbo].[StudentParentDetail] ([ParentID], [ProfileId], [FatherName], [MotherName], [GuardianName], [PhoneNumber], [Email], [AddressLine], [Country], [City], [State], [PinCode]) VALUES (10, 10, N'Amit Roy', N'Sharmila Roy', N'Sharmila Roy', N'9811100010', N'sharmila.roy@testmail.com', N'House 45', N'India', N'Kolkata', N'West Bengal', N'700052')
+GO
+SET IDENTITY_INSERT [dbo].[StudentParentDetail] OFF
+GO

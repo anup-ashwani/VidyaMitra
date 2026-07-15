@@ -1,0 +1,53 @@
+USE [VMAuthDB]
+
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'0325a3c8-5cc8-48aa-841a-08684b7502bf', N'Vikram Singh', N'vikram.singh@testmail.com', N'VIKRAM.SINGH@TESTMAIL.COM', N'vikram.singh@testmail.com', N'VIKRAM.SINGH@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEAjs3AFjs1fN85wBzb1P2uFD7WBvfm1AosAGS7amnX1fdlxcmzdhHu36oU7gWpUKrQ==', N'VRTECXGMDBURGDSM56GG2ZE633Q2SPF4', N'271a27bb-8064-4aeb-ab26-161c6a903d35', N'9876500007', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'1b67c7dc-1177-464f-a4ba-15436e439010', N'Aarav Sharma', N'aarav.sharma@testmail.com', N'AARAV.SHARMA@TESTMAIL.COM', N'aarav.sharma@testmail.com', N'AARAV.SHARMA@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEIRm9wxDnGTsCf1ljH7bkloomj4s4bez1fRBwvJwFKL19UHTC6S2ZYAy0dOjNBC4jg==', N'3MTPK4IFCQKAX3V23YMXFOFK73GNIJTU', N'79b364be-1356-49d2-a18c-4c4833021ed0', N'9876500001', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'3d06ee33-9bbb-4d17-b0c4-5d1a324f0848', N'Aditya Verma', N'aditya.verma@testmail.com', N'ADITYA.VERMA@TESTMAIL.COM', N'aditya.verma@testmail.com', N'ADITYA.VERMA@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEPl6+FygvFh30FBndCfoSI+yejEh/ZawkVG8uX8GVwnIOESQCc5E9n+gAw5lXnBF1A==', N'HEMXXWP2BYSK6EXSVE4W6NGSORE6OH3S', N'c04d5a64-1aa1-4e65-8445-0aae711ed1bd', N'9876500005', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'893f2403-5014-44f4-a5e5-d700c6b28c62', N'Admin', N'admin@gmail.com', N'ADMIN@GMAIL.COM', N'admin@gmail.com', N'ADMIN@GMAIL.COM', 0, N'AQAAAAIAAYagAAAAED7rLEqbxBPmy0g0vCRrfh8Vf80S0AJ/KjHRslmHXOuMbjKu+O30HbrcW3hzc0GXkA==', N'O7NDSLBXTXKSYE56LOLPI3GME6MDY3RO', N'35743f41-6023-486e-a6c5-06ab9a89788e', N'1234567890', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'8e095bd9-460d-41a6-abcd-22e71decf254', N'Ananya Roy', N'ananya.roy@testmail.com', N'ANANYA.ROY@TESTMAIL.COM', N'ananya.roy@testmail.com', N'ANANYA.ROY@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEC48npGx/QbeWkSgQomT8Y/C1uNELrkjsC6hQYEdG/q+OXbDDAciqnIxPT5V+Lo7NQ==', N'QHUFPZ6BKFCTB7LWJNBKS2RN2V3EZRO2', N'0a4f2cfd-1520-48ad-b11c-8d2cf50e1a77', N'9876500010', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'a390b949-bdeb-4495-a40c-dafd9dff8fa3', N'Sneha Iyer', N'sneha.iyer@testmail.com', N'SNEHA.IYER@TESTMAIL.COM', N'sneha.iyer@testmail.com', N'SNEHA.IYER@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEPIwf2efkn89IVVM4EUIaxxcbNZMn4SLmHHUZUjOKv3M1qbr6K5pFVUjIOopFQZfTA==', N'PA65TFC7LQDN52XTCOADRMDNGD2BL2QN', N'3cd44c0a-e18b-4834-a45a-1023c05674af', N'9876500004', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'ab75fa25-b3e8-45b4-97d7-6dbf9bfc5cb3', N'Rohan Patel', N'rohan.patel@testmail.com', N'ROHAN.PATEL@TESTMAIL.COM', N'rohan.patel@testmail.com', N'ROHAN.PATEL@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEH1LnL6ZwZVIAU2sytSSMzk+BS2/UqoxuruOSI0LcX7osRmyWQYAjhpVD2Q4+3hP8g==', N'5YBOEBHTE43BENORK7UIKX44CC7JYFOM', N'c36776ae-d36a-428d-8820-f5fc96a76a1b', N'9876500003', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'b129ee47-a267-44ba-a8c2-ee8aa46abb43', N'Neha Das', N'neha.das@testmail.com', N'NEHA.DAS@TESTMAIL.COM', N'neha.das@testmail.com', N'NEHA.DAS@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEMjYLdmFxEISbNCOKOwmlQUD8PhoojoHxdICJxUxFnviELmGbNOcGVY6JrY3U5VWFw==', N'HEVTEWHWSA36BZJN4NCZZ2KS2GR7QRR6', N'7ab71916-254c-40af-9d44-65a946482533', N'9876500008', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'b462ea59-5ce3-44ee-89c1-576c5737c74e', N'Priya Nair', N'priya.nair@testmail.com', N'PRIYA.NAIR@TESTMAIL.COM', N'priya.nair@testmail.com', N'PRIYA.NAIR@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEMpORSBtuy1VZxTSUKyFU6hlEIHS+g4xGmBEbuH7WWeczHB6E2c816UcnXZ1rhGg9w==', N'PLIV73QUTP2RFGVYYHCFOPYBCOGM7TB2', N'169c90aa-c1ee-43c0-9c73-5559b039debe', N'9876500002', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'c8319f3a-d6a0-4a19-a2f1-9ea2793f5e7b', N'Rahul Joshi', N'rahul.joshi@testmail.com', N'RAHUL.JOSHI@TESTMAIL.COM', N'rahul.joshi@testmail.com', N'RAHUL.JOSHI@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEKgGjyuteUa9J3q5gLi1of1wzoPHSF/nLKPiSEIoiuQC2cWl+DsBYof3Eb2MSzupoA==', N'37AE2YZM3POJBGZH7PSHBYEMPJBZ4TRN', N'708f13cc-ec8e-4bcf-a1d6-ffbb4801fdfa', N'9876500009', 0, 0, NULL, 1, 0)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [FullName], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'cdc9fe99-a8fd-4977-913a-ae5e68bd73fa', N'Kavya Reddy', N'kavya.reddy@testmail.com', N'KAVYA.REDDY@TESTMAIL.COM', N'kavya.reddy@testmail.com', N'KAVYA.REDDY@TESTMAIL.COM', 0, N'AQAAAAIAAYagAAAAEIHLUeLmfCqPsU3B8+jPloTFTOoiBNKQzUZcbjkUk9nH5dhRAdiSBjXF1x8VkU0/3g==', N'3PAXBGQK5743VU4KBIQVO4SFJWF472CG', N'2e21cb2a-ff08-45fe-87d6-5b236dc4b6d9', N'9876500006', 0, 0, NULL, 1, 0)
+
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'6c7ecf42-d477-41f9-be91-0bea09226da7', N'Admin', N'ADMIN', N'b94a5ecc-6439-49eb-a12b-ec3ae223b865')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'9376ca52-e4be-49da-9528-45fd59c74155', N'Student', N'STUDENT', N'1d9f0258-4ce7-4cfd-8161-fc15326f0f22')
+GO
+
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'0325a3c8-5cc8-48aa-841a-08684b7502bf', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'1b67c7dc-1177-464f-a4ba-15436e439010', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'3d06ee33-9bbb-4d17-b0c4-5d1a324f0848', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'893f2403-5014-44f4-a5e5-d700c6b28c62', N'6c7ecf42-d477-41f9-be91-0bea09226da7')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'8e095bd9-460d-41a6-abcd-22e71decf254', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'a390b949-bdeb-4495-a40c-dafd9dff8fa3', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'ab75fa25-b3e8-45b4-97d7-6dbf9bfc5cb3', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'b129ee47-a267-44ba-a8c2-ee8aa46abb43', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'b462ea59-5ce3-44ee-89c1-576c5737c74e', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'c8319f3a-d6a0-4a19-a2f1-9ea2793f5e7b', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'cdc9fe99-a8fd-4977-913a-ae5e68bd73fa', N'9376ca52-e4be-49da-9528-45fd59c74155')
+GO

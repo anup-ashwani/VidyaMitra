@@ -45,12 +45,12 @@ CREATE TABLE [dbo].[StudentContactDetail](
 	[C_Country] [varchar](25) NULL,
 	[C_State] [varchar](25) NULL,
 	[C_City] [varchar](25) NULL,
-	[C_PinCode] [varchar](5) NULL,
+	[C_PinCode] [varchar](6) NULL,
 	[P_AddressLine] [varchar](500) NULL,
 	[P_Country] [varchar](25) NULL,
 	[P_State] [varchar](25) NULL,
 	[P_City] [varchar](25) NULL,
-	[P_PinCode] [varchar](5) NULL,
+	[P_PinCode] [varchar](6) NULL,
  CONSTRAINT [PK_ContactDetail] PRIMARY KEY CLUSTERED 
 (
 	[ContactId] ASC
@@ -72,7 +72,7 @@ CREATE TABLE [dbo].[StudentEmeregencyContact](
 	[Country] [varchar](25) NULL,
 	[State] [varchar](25) NULL,
 	[City] [varchar](25) NULL,
-	[PinCode] [varchar](5) NULL,
+	[PinCode] [varchar](6) NULL,
  CONSTRAINT [PK_EmeregencyContact] PRIMARY KEY CLUSTERED 
 (
 	[EContactId] ASC
@@ -116,7 +116,7 @@ CREATE TABLE [dbo].[StudentParentDetail](
 	[Country] [varchar](25) NOT NULL,
 	[City] [varchar](25) NULL,
 	[State] [varchar](25) NULL,
-	[PinCode] [varchar](5) NULL,
+	[PinCode] [varchar](6) NULL,
  CONSTRAINT [PK_ParentDetail] PRIMARY KEY CLUSTERED 
 (
 	[ParentID] ASC
